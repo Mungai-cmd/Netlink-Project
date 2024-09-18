@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/android-chrome-192x192.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NetLink|Register</title>
+</head>
+<body>
+
+ <!-- =======================|| Login Form || ======================================== -->
+
+
+<section class="login-page" id="login-page"> 
+    <form action="" id="login-form">
+      <h1 id="login-form-heading">Login</h1> 
+      <div class="login-input">
+        <label for="email">Email: <br>
+            <input type="email" id="email" placeholder="Enter Email Address" name="email" required>
+          </label>
+    
+          <label for="password">Password: <br>
+            <div class="password-container">
+              <input type="password" id="password" placeholder="Password" name="password"
+                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}"
+                     title="Password must be at least 8 characters long, contain at least one number, one lowercase letter, one uppercase letter, and one special character (@, #, $, %, ^, &, +)." required>
+              <i class="fas fa-eye toggle-icon" onclick="togglePassword('password')" id="login-password"></i>
+            </div>
+          </label>
+
+      </div>
+
+      
+      <div class="login-below">
+        <div id="message" class="message"></div>
+      <p><span><input type="checkbox" checked></span>Keep me signed in</p>
+      
+      <p>Don't have an account? 
+        <span id="sign-in">
+          <a href="register.html" >Register</a>
+        </span>
+      </p>
+
+      <button id="login"><a href="home.html">Log In</a></button>
+
+      </div>
+
+        </form>
+    </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

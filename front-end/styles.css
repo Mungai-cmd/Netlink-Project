@@ -245,33 +245,36 @@ body{
     position: fixed;
     top: 50%;
     left: 50%;
+    font-family: 'Raleway';
     transform: translate(-50%, -50%);
     padding: 20px;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    visibility: hidden; /* Ensure it's not clickable while hidden */
-    z-index: 1100;
     width: 100%;
     height: 100vh;
-    background-color: rgba(136, 133, 133, 0.938);
+    background-color: #023262;
 
   }
 
   #registration-form{
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50%;
-    height: 100%;
+    height: 80%;
     background-color: #fff;
     margin: 0 auto;
     padding: 0px;
     border-radius: 10px;
-    z-index: 10;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.3);
 }
+
 
 
 #form-heading {
     text-align: center;
-    color: #1278e9;
+    color: #023262;
     font-size: 1.4rem;
+    padding: 15px;
 }
 
 #registration-input{
@@ -292,7 +295,7 @@ body{
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #1278e9; 
+    color: #023262; 
   }
 
   .password-container .toggle-icon.hidden {
@@ -311,38 +314,6 @@ body{
     color: red;
   }
 
-  .registration-page.show {
-    display: block;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); /* Scale to normal size */
-    visibility: visible;
-  }
-  .registration-page.hide {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5); /* Scale down during hide */
-    visibility: hidden;
-  }
-  .registration-page .close-btn {
-    position: relative;
-    top: 10px;
-    left: 85%;
-    font-size: 30px;
-    cursor: pointer;
-    color: #000;
-  }
-  .registration-page .close-btn:hover {
-    color: #333;
-  }
-
-  .close-btn button {
-    padding: 10px 20px;
-    color: #eee;
-    font-weight: 800;
-    font-size: 1.2rem;
-    background-color: rgba(230, 22, 22, 0.952);
-    border: none;
-    border-radius: 6px;
-  }
   .form-icons a {
     display: inline-flex;
     align-items: center;
@@ -354,13 +325,13 @@ body{
 
 label{
     display: block;
-    padding: 10px;
+    padding: 8px;
     margin: 0 auto;
 }
 
 input{
     width: 80%;
-    height: 2.5rem;
+    height: 2.7rem;
     border-radius: 5px;
     border: 0.5px solid #bbb;
     padding-left: 10px;
@@ -368,8 +339,8 @@ input{
 }
 
 input:focus{
-    border: 0.6px solid  #1278e9;
-    outline: 0.56px solid  #1278e9;
+    border: 0.6px solid  #023262;
+    outline: 0.56px solid  #023262;
 }
 
 ::placeholder{
@@ -377,15 +348,17 @@ input:focus{
 }
 
 .registration-below{
-    margin: auto 10px;   
-    padding: 0px 20px;
+    width: 75%;
+    margin: 15px auto;
     font-size: 0.8rem;
-
 }
 
 .registration-below p{
-    padding:15px;
-    margin: 0px 20px;
+    display: inline-block;
+    width: 80%;
+    padding:8px;
+    margin: 0px auto;
+    text-align: left;
 }
 
 .registration-below input[type="checkbox"]{
@@ -395,33 +368,41 @@ input:focus{
     display: inline;
 }
 
+.registration-below input[type="checkbox"]:checked{
+    background-color: #023262;
+    border-color:#023262 ;
+}
+
 #terms-and-conditions a{
-    color: #1278e9;
+    color: #023262;
     text-decoration: none;
     cursor: pointer;
 }
 
-.register-to-home{
-    padding: 10px 200px;
-    background-color:  #1278e9;
+.registration-below button{
+    padding: 15px;
+    width: 60%;
+    background-color:  #023262;
     border-radius: 5px; 
-    color: #fff;
-    text-decoration: none;
+    border: none;
+    margin: 0px auto;
     font-size: 1.1rem;
     font-weight: 600;
+    cursor: pointer;
     position: relative;
-    left: 10%;
+    left: 20%;
+}
 
+.register-to-home{
+    color: #fff;
+    text-decoration: none;
 }
 
 #sign-in a{
     text-decoration: none;
-    color: #1278e9;
+    color: #023262;
 }
 
-#or{
-    margin: 5px 20px;
-}
 
 #form-icons{
     display: flex;
@@ -433,7 +414,7 @@ input:focus{
 }
 
 .sign-in-with{
-    border: 0.8px solid #1278e9;
+    border: 0.8px solid #023262;
     border-radius: 8px;
     padding: 5px;
     cursor: pointer;
@@ -445,7 +426,7 @@ input:focus{
 }
 
 .sign-in-with a {
-    color: #1278e9;
+    color: #023262;
     text-decoration: none;
 }
 
@@ -469,25 +450,21 @@ input:focus{
 }
 
 .fa-facebook{
-    color: #1278e9;
+    color: #023262;
 
 }
 
 /* =========================== || Login Form ============================================= */
 .login-page {
-    display: none; 
-    visibility: visible;
     position: fixed;
     top: 50%;
     left: 50%;
+    font-family: 'Raleway';
     transform: translate(-50%, -50%);
     padding: 20px;
-    opacity: 0;
-    transition: opacity 3s ease, transform  3s ease;
-    z-index: 600;
     width: 100%;
     height: 100vh;
-    background-color: rgba(136, 133, 133, 0.938);
+    background-color: #023262;
 
   }
 
@@ -502,14 +479,13 @@ input:focus{
     margin: 0 auto;
     padding: 0px;
     border-radius: 10px;
-    transition: opacity 3s ease, transform  3s ease;
-
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #login-close-btn button {
-    position:relative;
-    top: 25%;
-    left: 65%;
+    position:fixed;
+    top: -110%;
+    left: 90%;
     color: #333;
     z-index: 10;
     font-size: 2rem;
@@ -517,18 +493,20 @@ input:focus{
 }
 
 #login-form-heading{
-    color: #1278e9;
+    color: #023262;
     text-align: center;
     padding: 20px;
     font-size: 1.8rem;
+    width: 60%;
+    margin: 0px auto;
 }
 .login-input{
-    width: 60%;
+    width: 80%;
     margin: 0px auto;
 }
 
 .login-below{
-    width: 60%;
+    width: 80%;
     margin: 0px auto;
     
 }
@@ -538,7 +516,7 @@ input:focus{
     margin: 30px auto;
     width: 80%;
     padding: 15px;
-    background-color:  #1278e9;
+    background-color:  #023262;
     border: none;
     border-radius: 5px; 
     cursor: pointer;
@@ -551,7 +529,7 @@ input:focus{
 
 
 .password-container .fa-eye.toggle-icon{
-    color: #1278e9;
+    color: #023262;
     position: absolute;
     top: 50%;
     right: 25%;
@@ -570,27 +548,6 @@ input:focus{
     margin: 15px;
 }
 
-  .login-page.show {
-    display: block;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); 
-    
-}
-.login-page.hide {
-opacity: 0;
-transform: translate(-50%, -50%) scale(0.9); 
-visibility: hidden;
-}
-.login-page .login-close-btn button {
-font-size: 18px;
-cursor: pointer;
-color: #888;
-border: none;
-background: none;
-}
-.login-page .login-close-btn button:hover {
-color: #333;
-}
 .login-page input.error {
 border: 2px solid red;
 }
@@ -610,17 +567,6 @@ color: blue;
 }
 .password-container .toggle-icon.hidden {
 color: gray; 
-}
-.message {
-font-size: 0.875em;
-margin-top: 5px;
-display: none; 
-}
-.message.success {
-color: green;
-}
-.message.error {
-color: red;
 }
 
 /* =================|| Why us div || ================================================ */
@@ -775,6 +721,7 @@ span.num{
     width: 100%;
     margin: 20px auto;
     background: linear-gradient(45deg,rgba(0,0,0,0.7), rgba(34, 140, 202, 0.692)),url(/images/testimonials-background.jpeg);
+    position: relative;
 }
 
 .testimonials-subtopic h2{
@@ -797,7 +744,8 @@ span.num{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin: 20px 0px;
+    margin: 20px auto;
+    transform: translate(-50% -50%);
     position: relative;
     left: 46%;
 }
@@ -839,7 +787,7 @@ span.num{
     position: absolute;
     left: 41.8%;
     margin-top: -1.39%;
-    display: flex;
+    display: none;
 
 }
 
@@ -885,7 +833,8 @@ span.num{
 /* css for automatic navigation */
 .navigation-auto{
     position: absolute;
-    display: flex;
+    display: none;
+    visibility: hidden;
     position: absolute;
     left: 41.8%;
     margin-top: 15.69%;
@@ -1932,69 +1881,42 @@ footer{
 /* ============================|| Registration Form || ===================================== */
 
 .registration-page {
-    display: none;
     position: relative;
-    top: -10%;
-    left: 50%;
     padding: 0px;
-    visibility: hidden; 
-    z-index: 1100;
     width: 100%;
     height: 100vh;
 
   }
 
   #registration-form{
-    position: absolute;
-    top: -18%;
-    left: 0%;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 0px;
     border-radius: 0px;
+    width: 100%;
+    height: 100%;
    
 }
 
-
-
 #form-heading {
     text-align: center;
-    color: #1278e9;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 15px 0px;
 }
 
 #registration-input{
     width: 100%;
     position: relative;
-    margin-left: 20px;
-    font-size: 0.8rem;
+    margin-left: 20px auto;
+    font-size: 0.9rem;
     
 }
 
 
-.registration-page .close-btn {
-position: relative;
-top: 10px;
-left: 70%;
-
-
-}
-
-
-.close-btn button {
-padding: 5px 10px;
-font-size: 0.8rem;
-border-radius: 3px;
-
-}
-
 label{
-    padding:5px;
+    padding:10px;
 }
 
 input{
-    width: 80%;
+    width: 90%;
     height: 2.5rem;
     border-radius: 3px;
     border: 0.2px solid #aaa;
@@ -2003,8 +1925,8 @@ input{
 }
 
 input:focus{
-    border: 0.3px solid  #1278e9;
-    outline: 0.3px solid  #1278e9;
+    border: 0.3px solid  #023262;
+    outline: 0.3px solid  #023262;
 }
 
 ::placeholder{
@@ -2012,57 +1934,73 @@ input:focus{
 }
 
 .registration-below{
-    margin: auto 5px;   
-    padding: 0px 5px;
-    font-size: 0.7rem;
+    width: 100%;
+    margin: 0;   
+    padding: 0px;
+    font-size: 0.8rem;
 
 }
 
 .registration-below p{
-    padding:5px;
+    padding:10px 5px;
+    
 }
 
 .registration-below input[type="checkbox"]{
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.9rem;
+    height: 0.9rem;
     position: relative;
     display: inline;
 }
 
 
-.register-to-home{
-    padding: 3px 80px;
-    border-radius: 2px; 
-    font-size: 0.8rem;
-    font-weight: 400;
-}
-
-
-#form-icons{
-    display: flex;
-    width: 90%;
+.register-to-home button{
     position: relative;
-    left: -8%;
+    padding: 0.6rem 6rem;
+    border-radius: 5px; 
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+#form-icons{
+    display: block;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    background-color: #023262;
 }
 
 .sign-in-with{
-    border-radius: 2px;
+    border-radius: 5px;
+    border: 0.8px solid #ccc;
     padding: 5px;
-    font-size: 0.7rem;
-    height: 1.8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    height: 3rem;
+    width: 70%;
+    margin: 10px auto;
+   
   
+}
+
+.sign-in-with a {
+    color: #ccc;
+}
+
+.sign-in-with .fa-brands{
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    color: #fff;
 }
  
 
 /* =========================== || Login Form ============================================= */
 .login-page {
-    display: none;
-    visibility: hidden;
     position: relative;
-    top: 20%;
-    left: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 0px;
-    z-index: 1200;
     width: 100%;
     height: 100vh;
 
@@ -2070,40 +2008,30 @@ input:focus{
 
   #login-form{
     position: absolute;
-    top: 12%;
-    left: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100vh;
     border-radius: 0px;
 
 }
 
-#login-close-btn button {
-    font-size: 1.9rem;
-    position:relative;
-    left: 110%;
-    top: -33%;
-    transform: translate(-50%, -50%);
-
-}
 
 #login-form-heading{
     padding: 15px;
     font-size: 1.4rem;
-    margin: 0px auto;
+    width: 100%;
     display: inline-block;
-    position: relative;
-    left: 40%;
-
 }
 .login-input{
-    width: 100%;
-    margin: 10px;
+    width: 90%;
+    margin: 10px auto;
 }
 
 .login-below{
-    width: 100%;
-    margin: 0px auto;  
+    width: 90%;
+    margin: 0px auto; 
 }
 
 .login-below button {
@@ -2864,22 +2792,16 @@ footer{
 /* ============================|| Registration Form || ===================================== */
 
 .registration-page {
-    display: none;
     position: relative;
-    top: -10%;
+    top: 50%;
     left: 50%;
-    padding: 0px;
-    visibility: hidden; 
-    z-index: 1100;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100vh;
 
   }
 
   #registration-form{
-    position: absolute;
-    top: -38%;
-    left: 0%;
     width: 100%;
     height: 100vh;
     margin: 0 auto;
@@ -2888,41 +2810,20 @@ footer{
    
 }
 
-
-
 #form-heading {
-    text-align: center;
-    color: #1278e9;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    padding: 15px 0px;
 }
 
 #registration-input{
-    width: 100%;
+    width: 90%;
     position: relative;
-    margin-left: 20px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     
 }
 
-
-.registration-page .close-btn {
-position: relative;
-top: 10px;
-left: 70%;
-
-
-}
-
-
-.close-btn button {
-padding: 5px 10px;
-font-size: 0.8rem;
-border-radius: 3px;
-
-}
-
 label{
-    padding:5px;
+    padding:10px;
 }
 
 input{
@@ -2930,23 +2831,14 @@ input{
     height: 2.5rem;
     border-radius: 3px;
     border: 0.2px solid #aaa;
-    padding-left: 4px;
-    
 }
 
-input:focus{
-    border: 0.3px solid  #1278e9;
-    outline: 0.3px solid  #1278e9;
-}
-
-::placeholder{
-    padding: 10px;
-}
 
 .registration-below{
-    margin: auto 5px;   
-    padding: 0px 5px;
+    margin: 0px;   
+    padding: 0px;
     font-size: 0.7rem;
+    width: 100%;
 
 }
 
@@ -2961,80 +2853,71 @@ input:focus{
     display: inline;
 }
 
-
-.register-to-home{
-    padding: 3px 80px;
-    border-radius: 2px; 
-    font-size: 0.8rem;
-    font-weight: 400;
-}
-
-
 #form-icons{
-    display: flex;
-    width: 90%;
+    display: block;
+    width: 100%;
+    height: 40vh;
     position: relative;
-    left: -8%;
+    background-color: #023262;
 }
 
 .sign-in-with{
-    border-radius: 2px;
+    border-radius: 5px;
+    border: 0.8px solid #ccc;
     padding: 5px;
-    font-size: 0.7rem;
-    height: 1.8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    height: 3rem;
+    width: 70%;
+    margin: 10px auto;
+   
   
 }
- 
+
+.sign-in-with a {
+    color: #ccc;
+}
+
+.sign-in-with .fa-brands{
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    color: #fff;
+}
 
 /* =========================== || Login Form ============================================= */
 .login-page {
-    display: none;
     position: relative;
-    top: 20%;
-    left: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 0px;
-    z-index: 1200;
     width: 100%;
     height: 100vh;
 
   }
 
   #login-form{
-    position: absolute;
-    top: 12%;
-    left: 70%;
     width: 100%;
     height: 100vh;
     border-radius: 0px;
 
 }
 
-#login-close-btn button {
-    font-size: 1.9rem;
-    position:relative;
-    left: 110%;
-    top: -33%;
-    transform: translate(-50%, -50%);
-
-}
 
 #login-form-heading{
     padding: 15px;
     font-size: 1.4rem;
-    margin: 0px auto;
+    width: 100%;
     display: inline-block;
-    position: relative;
-    left: 40%;
-
 }
 .login-input{
-    width: 100%;
-    margin: 10px;
+    width: 80%;
+    margin: 10px auto;
 }
 
 .login-below{
-    width: 100%;
-    margin: 0px auto;  
+    width: 80%;
+    margin: 0px auto; 
 }
 
 .login-below button {
@@ -3043,6 +2926,7 @@ input:focus{
     width: 70%;
     padding: 10px;
 }
+
 
 /* =================|| Why us div || ================================================ */
 
@@ -3810,70 +3694,31 @@ footer{
 /* ============================|| Registration Form || ===================================== */
 
 .registration-page {
-    display: none;
-    position: relative;
-    top: -10%;
-    left: 50%;
-    padding: 0px;
-    visibility: hidden; 
-    z-index: 1100;
     width: 100%;
     height: 100vh;
 
-  }
-
-  #registration-form{
-    position: absolute;
-    top: -38%;
-    left: 0%;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 0px;
-    border-radius: 0px;
-   
 }
-
-
-
+  #registration-form{
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px;  
+}
 #form-heading {
-    text-align: center;
-    color: #1278e9;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 #registration-input{
-    width: 100%;
-    position: relative;
-    margin-left: 20px;
-    font-size: 0.8rem;
-    
-}
-
-
-.registration-page .close-btn {
-position: relative;
-top: 10px;
-left: 70%;
-
-
-}
-
-
-.close-btn button {
-padding: 5px 10px;
-font-size: 0.8rem;
-border-radius: 3px;
-
+    width: 80%;
+    font-size: 0.95rem;   
 }
 
 label{
-    padding:5px;
+    padding:10px;
 }
 
 input{
     width: 80%;
-    height: 2.5rem;
+    height: 3rem;
     border-radius: 3px;
     border: 0.2px solid #aaa;
     padding-left: 4px;
@@ -3881,8 +3726,8 @@ input{
 }
 
 input:focus{
-    border: 0.3px solid  #1278e9;
-    outline: 0.3px solid  #1278e9;
+    border: 0.3px solid  #023262;
+    outline: 0.3px solid  #023262;
 }
 
 ::placeholder{
@@ -3890,78 +3735,58 @@ input:focus{
 }
 
 .registration-below{
-    margin: auto 5px;   
-    padding: 0px 5px;
-    font-size: 0.7rem;
+    width: 80%;
+    margin: 5px auto;   
+    font-size: 0.85rem;
 
 }
 
 .registration-below p{
-    padding:5px;
+    padding:10px;
 }
 
 .registration-below input[type="checkbox"]{
-    width: 0.7rem;
-    height: 0.7rem;
-    position: relative;
-    display: inline;
-}
-
-
-.register-to-home{
-    padding: 3px 80px;
-    border-radius: 2px; 
-    font-size: 0.8rem;
-    font-weight: 400;
+    width: 0.8rem;
+    height: 0.8rem;
 }
 
 
 #form-icons{
     display: flex;
     width: 90%;
+    margin-top: 20px;
     position: relative;
-    left: -8%;
+    left: 0%;
 }
 
 .sign-in-with{
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 5px;
-    font-size: 0.7rem;
-    height: 1.8rem;
-  
+    font-size: 1rem;
+    font-weight: 500;
+    height: 3rem;
+    width: 30%;
+}
+
+.sign-in-with p {
+    padding: 0px 10px;
+}
+
+.registration-below .fa-brands{
+    font-size: 1.2rem;
+    padding: 0px 10px;
 }
  
 
 /* =========================== || Login Form ============================================= */
-.login-page {
-    display: none;
-    position: relative;
-    top: 20%;
-    left: 30%;
-    padding: 0px;
-    z-index: 1200;
+.login-page { 
     width: 100%;
     height: 100vh;
-
-  }
-
-  #login-form{
-    position: absolute;
-    top: 12%;
-    left: 70%;
-    width: 100%;
-    height: 100vh;
-    border-radius: 0px;
-
 }
-
-#login-close-btn button {
-    font-size: 1.9rem;
-    position:relative;
-    left: 110%;
-    top: -33%;
-    transform: translate(-50%, -50%);
-
+#login-form{ 
+    width: 50%;
+    height: 80vh;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
 #login-form-heading{
@@ -3969,9 +3794,7 @@ input:focus{
     font-size: 1.4rem;
     margin: 0px auto;
     display: inline-block;
-    position: relative;
-    left: 40%;
-
+    width: 100%;
 }
 .login-input{
     width: 100%;
@@ -3980,12 +3803,12 @@ input:focus{
 
 .login-below{
     width: 100%;
-    margin: 0px auto;  
+    margin: 20px auto;  
 }
 
 .login-below button {
     width: 60%;
-    margin: 20px auto;
+    margin: 0px auto;
     width: 70%;
     padding: 10px;
 }
@@ -4548,24 +4371,86 @@ footer{
     font-size: 1.2rem;   
 }
 
+
 /* ============================|| Registration Form || ===================================== */
 
-#registration-form{
-    width: 70%;
+.registration-page {
+    width: 100%;
     height: 100vh;
+
 }
+  #registration-form{
+    width: 48%;
+    height: 90vh;
+    border-radius: 5px;  
+}
+#form-heading {
+    font-size: 1.4rem;
+}
+
 #registration-input{
     width: 80%;
+    font-size: 0.95rem;   
 }
 
-/* =========================== || Login Form ============================================= */
-#login-form{
-    height: 60%;
+label{
+    padding:8px;
+}
+
+input{
+    width: 80%;
+    height: 3rem;
+    border-radius: 3px;
+    border: 0.2px solid #aaa;
+    padding-left: 4px;
+    
+}
+
+::placeholder{
+    padding: 10px;
+}
+
+.registration-below{
+    width: 80%;
+    margin: 5px auto;   
+    font-size: 0.85rem;
 
 }
 
-#login-close-btn button {
-    top: 20%;
+.registration-below p{
+    padding:8px;
+}
+
+.registration-below input[type="checkbox"]{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+
+#form-icons{
+    display: flex;
+    width: 90%;
+    margin-top: 20px;
+    position: relative;
+    left: 0%;
+}
+
+.sign-in-with{
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    height: 3rem;
+    width: 30%;
+}
+
+.sign-in-with p {
+    padding: 0px 5px;
+}
+
+.registration-below .fa-brands{
+    font-size: 1.2rem;
+    padding: 0px 5px;
 }
 
 /* =================|| Why us div || ================================================ */

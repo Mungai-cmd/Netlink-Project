@@ -17,18 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, duration);
     });
 
-    // Toggle Password Visibility
-    function togglePassword(id) {
-        const passwordField = document.getElementById(id);
-        const toggleIcon = passwordField.nextElementSibling;
-        if (passwordField.type === 'password') {
-            passwordField.type = 'text';
-            toggleIcon.classList.add('hidden');
-        } else {
-            passwordField.type = 'password';
-            toggleIcon.classList.remove('hidden');
-        }
-    }
 
     // Validate Passwords
     function validatePasswords() {
@@ -50,22 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Show and Hide Registration Popup
-    const getStartedButton = document.getElementById('get-started');
-    if (getStartedButton) {
-        getStartedButton.addEventListener('click', function () {
-            const registrationPage = document.getElementById('registration-page');
-            registrationPage.classList.remove('hide');
-            registrationPage.classList.add('show');
-        });
-    }
-
-    function hidePopUp() {
-        const registrationPage = document.getElementById('registration-page');
-        registrationPage.classList.remove('show');
-        registrationPage.classList.add('hide');
-    }
-
     // Event Listeners for Form Fields
     const passwordField = document.getElementById('password');
     const confirmPasswordField = document.getElementById('confirm-password');
@@ -74,34 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
         confirmPasswordField.addEventListener('input', validatePasswords);
     }
 
-    // Close Button for Registration
-    const closeBtn = document.getElementById('close-btn');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', hidePopUp);
-    }
-
-    // Show and Hide Login Popup
-    const loginLink = document.getElementById('login-link');
-    if (loginLink) {
-        loginLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            const loginPage = document.getElementById('login-page');
-            loginPage.classList.remove('hide');
-            loginPage.classList.add('show');
-        });
-    }
-
-    function hideLoginPopup() {
-        const loginPage = document.getElementById('login-page');
-        loginPage.classList.remove('show');
-        loginPage.classList.add('hide');
-    }
-
-    // Close Button for Login
-    const loginCloseBtn = document.getElementById('login-close-btn');
-    if (loginCloseBtn) {
-        loginCloseBtn.addEventListener('click', hideLoginPopup);
-    }
 
     // Login Form Validation
     const loginForm = document.getElementById('login-form');

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/android-chrome-192x192.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NetLink|Register</title>
+</head>
+<body>
+
+ <!-- =============================================|| Registration Form || ============================== -->
+
+ <section class="registration-page" id="registration-page"> 
+    <form action="" id="registration-form">
+        <h1 id="form-heading">Registration</h1>
+        <div id="registration-input">
+            <label for="first-name">First Name: <br>
+                <input type="text" id="first-name" placeholder="Enter First Name" name="first-name" required>
+            </label>
+            <label for="last-name">Last Name: <br>
+                <input type="text" id="last-name" placeholder="Enter Last Name" name="last-name" required>
+            </label>
+            <label for="email">Email: <br>
+                <input type="email" id="email" placeholder="Enter Email Address" name="email" required>
+            </label>
+            <label for="password">Password: <br>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Password" name="password" required>
+                    <i class="fas fa-eye toggle-icon" onclick="togglePassword('password')"></i>
+                </div>
+            </label>
+            <label for="confirm-password">Confirm Password: <br>
+                <div class="password-container">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" name="confirm-password" required>
+                    <i class="fas fa-eye toggle-icon" onclick="togglePassword('confirm-password')"></i>
+                </div>
+            </label>
+            <div id="message" class="message"></div>
+        </div>
+        <div class="registration-below">
+            <p><span><input type="checkbox" checked></span>Keep me signed in</p>
+            <p id="registration-terms">
+                <span><input type="checkbox" checked></span>I agree to the 
+                <span id="terms-and-conditions">
+                    <a href="#">Terms and conditions</a>
+                </span>
+            </p>
+            <button><a href="login.html" class="register-to-home" target="_blank">Register</a></button>
+            
+            <p>Already have an account? <span id="sign-in"><a href="login.html">Sign in</a></span></p>
+            <p id="or">Or sign in with</p>
+            <div id="form-icons" class="form-icons">
+                <div class="sign-in-with">
+                    <a href="https://accounts.google.com" target="_blank">
+                        <i class="fa-brands fa-google"></i>
+                        <p>Google</p>
+                    </a>
+                </div>
+                <div class="sign-in-with">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>Facebook</p>
+                    </a>
+                </div>
+                <div class="sign-in-with">
+                    <a href="https://x.com" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <p>Twitter</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
