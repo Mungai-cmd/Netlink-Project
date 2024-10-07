@@ -75,6 +75,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Show and hide password toggle
+
+    function togglePassword(){
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirm-password");
+        const showPassword = document.getElementById("show-password");
+
+        if(password.value && confirmPassword.value !== 0){
+            password.type = 'text';
+            confirmPassword.type = 'text';
+            showPassword.style.display = "inline"
+        }
+    }
+
     // Product List Toggle
     const toggleButton = document.getElementById('products-toggle');
     const nestedList = document.getElementById('nested-list');

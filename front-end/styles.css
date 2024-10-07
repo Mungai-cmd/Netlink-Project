@@ -527,6 +527,11 @@ input:focus{
     left: 10%;
 }
 
+.loggin-below-link {
+    color: #fff;
+    text-decoration: none;
+}
+
 
 .password-container .fa-eye.toggle-icon{
     color: #023262;
